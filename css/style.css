@@ -106,6 +106,7 @@ header nav a:last-child {
 }
 
 .fm-hero-section .fm-hero-caption h1 {
+  line-height: 1.5em;
   padding-top: 32px;
 }
 
@@ -296,6 +297,7 @@ header nav a:last-child {
 .fm-sign-up p,
 .fm-sign-up .fm-signup-form {
   padding: 8px 0px;
+  line-height: 1.5em;
 }
 
 .fm-sign-up .fm-signup-form {
@@ -394,6 +396,11 @@ footer .fm-social-pane a {
 
 /* Large Tablet Displays */
 @media (min-width: 800px) {
+  h2 {
+    font-size: 1.6em;
+    line-height: 1.5em;
+  }
+
   .container {
     max-width: none;
     width: 85%;
@@ -414,6 +421,10 @@ footer .fm-social-pane a {
 
   .fm-hero-section .fm-hero-caption {
     text-align: left;
+  }
+
+  .fm-hero-section .fm-hero-caption h1 {
+    font-size: 2em;
   }
 
   .fm-pitch-section .container {

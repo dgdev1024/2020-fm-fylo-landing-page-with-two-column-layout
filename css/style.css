@@ -1,0 +1,498 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+/* Variables */
+:root {
+  --color-very-dark-blue: hsl(243, 87%, 12%);
+  --color-desaturated-blue: hsl(238, 22%, 44%);
+  --color-bright-blue: hsl(224, 93%, 58%);
+  --color-moderate-cyan: hsl(170, 45%, 43%);
+  --color-light-grayish-blue: hsl(240, 75%, 98%);
+  --color-light-gray: hsl(0, 0%, 75%);
+
+  --font-family-heading: 'Raleway', sans-serif;
+  --font-family-normal: 'Open Sans', sans-serif;
+
+  --font-weight-heading: 400;
+  --font-weight-heading-bold: 700;
+
+  --font-weight-normal: 400;
+}
+
+/* CSS Reset */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: var(--font-family-normal);
+  font-weight: var(--font-weight-normal);
+  box-sizing: border-box;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading-bold);
+}
+
+h1.fm-light, h2.fm-light, h3.fm-light, h4.fm-light, h5.fm-light, h6.fm-light {
+  font-weight: var(--font-weight-heading);
+}
+
+/* Calls To Action */
+.fm-call-to-action {
+  font-family: var(--font-family-heading);
+}
+
+/* Section Containers */
+.container {
+  width: 85%;
+  max-width: 400px;
+  margin: 0px auto;
+}
+
+/* Header */
+header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 32px;
+  margin: 32px 0px;
+}
+
+header nav a {
+  display: inline-block;
+  margin: 0px 4px;
+  font-family: var(--font-family-heading);
+  font-size: 0.9em;
+  text-decoration: none;
+  color: var(--color-very-dark-blue);
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+header nav a:first-child {
+  margin-left: 0px;
+}
+
+header nav a:last-child {
+  margin-right: 0px;
+}
+
+/* Hero Section */
+.fm-hero-section {
+  padding: 64px 0px 160px;
+  background-image: url('../img/bg-curve-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.fm-hero-section .container {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-areas: 'image' 'action';
+}
+
+.fm-hero-section .fm-hero-caption {
+  grid-area: action;
+  text-align: center;
+  color: var(--color-very-dark-blue);
+}
+
+.fm-hero-section .fm-hero-caption h1 {
+  padding-top: 32px;
+}
+
+.fm-hero-section .fm-hero-caption p {
+  padding: 24px 0px;
+  font-size: 1em;
+}
+
+.fm-hero-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.fm-signup-form input {
+  display: block;
+  margin-bottom: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid var(--color-very-dark-blue);
+  border-radius: 4px;
+}
+
+.fm-signup-form input:hover {
+  outline: none;
+}
+
+.fm-signup-form .fm-input-element.error input {
+  border-color: red;
+}
+
+.fm-signup-form button {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px 0px;
+  font-weight: var(--font-weight-heading-bold);
+  color: var(--color-light-grayish-blue);
+  background-color: var(--color-bright-blue);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fm-signup-form .fm-input-element .fm-input-error {
+  display: none;
+  color: red;
+  font-size: 0.8em;
+  font-style: italic;
+} 
+
+.fm-signup-form .fm-input-element.error .fm-input-error {
+  display: block;
+  padding: 0px;
+}
+
+.fm-hero-section .fm-hero-image {
+  grid-area: image;
+}
+
+.fm-hero-section .fm-hero-image img {
+  display: block;
+  width: 100%;
+}
+
+/* Pitch Section */
+.fm-pitch-section {
+  background-color: var(--color-light-grayish-blue);
+}
+
+.fm-pitch-section .container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 'image' 'pitch';
+  align-items: center;
+}
+
+.fm-pitch-section .fm-pitch-image {
+  grid-area: image;
+}
+
+.fm-pitch-section .fm-pitch-image img {
+  width: 100%;
+}
+
+.fm-pitch-section .fm-pitch-caption {
+  grid-area: pitch;
+  text-align: center;
+}
+
+.fm-pitch-section .fm-pitch-caption h2 {
+  color: var(--color-very-dark-blue);
+}
+
+.fm-pitch-section .fm-pitch-caption p {
+  margin: 24px 0px;
+  line-height: 1.5em;
+  color: var(--color-desaturated-blue);
+}
+
+.fm-pitch-section .fm-pitch-caption a {
+  display: inline-block;
+  margin-bottom: 48px;
+  padding: 4px 0px;
+  font-size: 0.9em;
+  text-decoration: none;
+  color: var(--color-moderate-cyan);
+  border-bottom: 1px solid var(--color-moderate-cyan);
+}
+
+.fm-pitch-section .fm-pitch-caption a img {
+  display: inline-block;
+  margin-bottom: -4px;
+}
+
+.fm-pitch-section blockquote {
+  width: auto;
+  max-width:  360px;
+  margin: 0px auto 64px;
+  background-image: url('../img/icon-quotes.svg');
+  background-repeat: no-repeat;
+  background-position: top 24px left 32px;
+  background-size: 1.2em;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fm-pitch-section .fm-pitch-caption blockquote p {
+  margin: 0px;
+  padding: 48px 32px 12px;
+  text-align: left;
+  font-size: 0.9em;
+  font-weight: var(--font-weight-bold);
+  line-height: 2em;
+  color: black;
+}
+
+.fm-pitch-section .fm-pitch-caption blockquote cite {
+  padding: 0px 32px 32px;
+  text-align: left;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-style: normal;
+}
+
+.fm-pitch-section .fm-pitch-caption blockquote cite img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+  border-radius: 50%;
+}
+
+.fm-pitch-section .fm-pitch-caption blockquote cite h4 {
+  font-size: 0.9em;
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading-bold);
+}
+
+.fm-pitch-section .fm-pitch-caption blockquote cite p {
+  font-size: 0.7em;
+  padding: 0px;
+  margin: 0px;
+  color: var(--color-very-dark-blue);
+}
+
+.fm-sign-up {
+  background-color: var(--color-desaturated-blue);
+  color: white;
+}
+
+.fm-sign-up .container {
+  padding: 48px 0px;
+  text-align: center;
+
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-areas: 'caption' 'form';
+}
+
+.fm-sign-up .fm-sign-up-caption {
+  grid-area: caption;
+}
+
+.fm-sign-up h2,
+.fm-sign-up p,
+.fm-sign-up .fm-signup-form {
+  padding: 8px 0px;
+}
+
+.fm-sign-up .fm-signup-form {
+  grid-area: form;
+  width: 90%;
+  margin: 0px auto;
+}
+
+.fm-sign-up .fm-signup-form .fm-input-element.error .fm-input-error {
+  color: lightpink;
+}
+
+footer {
+  background-color: var(--color-very-dark-blue);
+}
+
+footer img[alt="Fylo"] {
+  padding: 48px 0px 32px;
+}
+
+footer .fm-footer-body {
+  padding-bottom: 48px;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: 'contact' 'lone' 'ltwo' 'social';
+  gap: 16px;
+  color: white;
+}
+
+footer .fm-contact-info {
+  grid-area: contact;
+  margin: 8px 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+footer .fm-contact-info p {
+  margin-left: 8px;
+}
+
+footer .fm-links-pane-one {
+  grid-area: lone;
+}
+
+footer .fm-links-pane-two {
+  grid-area: ltwo;
+}
+
+footer .fm-links-pane-one a,
+footer .fm-links-pane-two a {
+  display: block;
+  margin: 8px 0px;
+  color: white;
+  text-decoration: none;
+}
+
+footer .fm-links-pane-one a:hover,
+footer .fm-links-pane-two a:hover {
+  text-decoration: underline;
+}
+
+footer .fm-social-pane {
+  grid-area: social;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer .fm-social-pane a {
+  width: 32px;
+  height: 32px;
+  margin: 8px;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Small Tablet Displays */
+@media (min-width: 600px) {
+  header .container {
+    max-width: none;
+    width: 85%;
+  }
+
+  header nav a {
+    margin: 0px 8px;
+    font-size: 1em;
+  }
+}
+
+/* Large Tablet Displays */
+@media (min-width: 800px) {
+  .container {
+    max-width: none;
+    width: 85%;
+  }
+
+  .fm-hero-section {
+    background-image: url('../img/bg-curve-desktop.svg');
+  }
+
+  .fm-hero-section .container {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'action image';
+    gap: 16px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .fm-hero-section .fm-hero-caption {
+    text-align: left;
+  }
+
+  .fm-pitch-section .container {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'pitch image';
+    gap: 16px;
+    align-items: center;
+  }
+
+  .fm-pitch-section .fm-pitch-caption {
+    text-align: left; 
+  }
+
+  .fm-pitch-section .fm-pitch-caption blockquote {
+    margin: 0px 0px 64px;
+  }
+
+  .fm-sign-up .container {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'caption form';
+    gap: 16px;
+    align-items: center;
+  }
+
+  .fm-sign-up .fm-sign-up-caption {
+    text-align: left;
+  }
+
+  .fm-sign-up .fm-signup-form button {
+    width: 200px;
+  }
+
+  .fm-sign-up .fm-signup-form .fm-input-element.error .fm-input-error {
+    text-align: left;
+    font-size: 0.8em;
+  }
+
+  footer .fm-footer-body {
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas: 'contact lone ltwo social';
+  }
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0px;
+}
+
+/* Desktop Displays */
+@media (min-width: 1000px) {
+  .fm-hero-section .fm-signup-form {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .fm-hero-section .fm-signup-form .fm-input-element {
+    width: calc(100% - 160px);
+    margin-right: 16px;
+  }
+
+  .fm-hero-section .fm-signup-form input {
+    display: block;
+  }
+
+  .fm-hero-section .fm-signup-form button {
+    display: block;
+    width: 160px;
+    margin-top: 0px;
+    padding: 12px;
+  }
+}
+
+/* Large Desktop Displays */
+@media (min-width: 1200px) {
+
+}

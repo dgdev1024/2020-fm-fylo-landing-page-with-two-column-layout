@@ -243,7 +243,7 @@ header nav a:last-child {
   color: black;
 }
 
-.fm-pitch-section .fm-pitch-caption blockquote cite {
+.fm-pitch-section .fm-pitch-caption blockquote .citation {
   padding: 0px 32px 32px;
   text-align: left;
 
@@ -253,7 +253,7 @@ header nav a:last-child {
   font-style: normal;
 }
 
-.fm-pitch-section .fm-pitch-caption blockquote cite img {
+.fm-pitch-section .fm-pitch-caption blockquote .citation img {
   display: block;
   width: 48px;
   height: 48px;
@@ -261,13 +261,13 @@ header nav a:last-child {
   border-radius: 50%;
 }
 
-.fm-pitch-section .fm-pitch-caption blockquote cite h4 {
+.fm-pitch-section .fm-pitch-caption blockquote .citation h4 {
   font-size: 0.9em;
   font-family: var(--font-family-heading);
   font-weight: var(--font-weight-heading-bold);
 }
 
-.fm-pitch-section .fm-pitch-caption blockquote cite p {
+.fm-pitch-section .fm-pitch-caption blockquote .citation p {
   font-size: 0.7em;
   padding: 0px;
   margin: 0px;
